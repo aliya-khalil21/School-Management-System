@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8077E74C-FA21-4D02-B860-79FDECA1828F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LAB2</RootNamespace>
+    <AssemblyName>LAB2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addmarks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addmarks.Designer.cs">
+      <DependentUpon>addmarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlertParents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlertParents.Designer.cs">
+      <DependentUpon>AlertParents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Announcement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Announcement.Designer.cs">
+      <DependentUpon>Announcement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Announcement1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Announcement1.Designer.cs">
+      <DependentUpon>Announcement1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="announcementfromadmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="announcementfromadmin.Designer.cs">
+      <DependentUpon>announcementfromadmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="attendance1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="attendance1.Designer.cs">
+      <DependentUpon>attendance1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="attendance2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="attendance2.Designer.cs">
+      <DependentUpon>attendance2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BL\ClassAttendance.cs" />
+    <Compile Include="BL\student.cs" />
+    <Compile Include="BL\StudentAttendance.cs" />
+    <Compile Include="ChildResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildResult.Designer.cs">
+      <DependentUpon>ChildResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration.cs" />
+    <Compile Include="DL\AttendanceDL.cs" />
+    <Compile Include="DL\parent.cs" />
+    <Compile Include="DL\STU.cs" />
+    <Compile Include="Evaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evaluation.Designer.cs">
+      <DependentUpon>Evaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\AttendanceStatus.cs" />
+    <Compile Include="parent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parent.Designer.cs">
+      <DependentUpon>parent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParentCommunication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParentCommunication.Designer.cs">
+      <DependentUpon>ParentCommunication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Performance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Performance.Designer.cs">
+      <DependentUpon>Performance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="promotestudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="promotestudent.Designer.cs">
+      <DependentUpon>promotestudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ptcom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ptcom.Designer.cs">
+      <DependentUpon>ptcom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTcommunication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTcommunication.Designer.cs">
+      <DependentUpon>PTcommunication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTcommunication2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTcommunication2.Designer.cs">
+      <DependentUpon>PTcommunication2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Results.Designer.cs">
+      <DependentUpon>Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sgrading.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sgrading.Designer.cs">
+      <DependentUpon>sgrading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="student attendance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="student attendance.Designer.cs">
+      <DependentUpon>student attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="student1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="student1.Designer.cs">
+      <DependentUpon>student1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentadd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="studentadd.Designer.cs">
+      <DependentUpon>studentadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tattendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tattendance.Designer.cs">
+      <DependentUpon>Tattendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tattendance1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tattendance1.Designer.cs">
+      <DependentUpon>tattendance1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="teacheradd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="teacheradd.Designer.cs">
+      <DependentUpon>teacheradd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="teacherperformancetracker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teacherperformancetracker.Designer.cs">
+      <DependentUpon>teacherperformancetracker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacherportal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacherportal.Designer.cs">
+      <DependentUpon>Teacherportal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewattendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewattendance.Designer.cs">
+      <DependentUpon>viewattendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewAttendance1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewAttendance1.Designer.cs">
+      <DependentUpon>viewAttendance1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="addmarks.resx">
+      <DependentUpon>addmarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlertParents.resx">
+      <DependentUpon>AlertParents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Announcement.resx">
+      <DependentUpon>Announcement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Announcement1.resx">
+      <DependentUpon>Announcement1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="announcementfromadmin.resx">
+      <DependentUpon>announcementfromadmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="attendance1.resx">
+      <DependentUpon>attendance1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="attendance2.resx">
+      <DependentUpon>attendance2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildResult.resx">
+      <DependentUpon>ChildResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evaluation.resx">
+      <DependentUpon>Evaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="parent.resx">
+      <DependentUpon>parent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentCommunication.resx">
+      <DependentUpon>ParentCommunication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Performance.resx">
+      <DependentUpon>Performance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="promotestudent.resx">
+      <DependentUpon>promotestudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ptcom.resx">
+      <DependentUpon>ptcom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PTcommunication.resx">
+      <DependentUpon>PTcommunication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PTcommunication2.resx">
+      <DependentUpon>PTcommunication2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Results.resx">
+      <DependentUpon>Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sgrading.resx">
+      <DependentUpon>sgrading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student attendance.resx">
+      <DependentUpon>student attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student1.resx">
+      <DependentUpon>student1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentadd.resx">
+      <DependentUpon>studentadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tattendance.resx">
+      <DependentUpon>Tattendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tattendance1.resx">
+      <DependentUpon>tattendance1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teacheradd.resx">
+      <DependentUpon>teacheradd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teacherperformancetracker.resx">
+      <DependentUpon>teacherperformancetracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacherportal.resx">
+      <DependentUpon>Teacherportal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewattendance.resx">
+      <DependentUpon>viewattendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewAttendance1.resx">
+      <DependentUpon>viewAttendance1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include=".editorconfig" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
